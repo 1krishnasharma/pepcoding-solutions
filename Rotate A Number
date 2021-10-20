@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.Math;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+      long n=sc.nextLong();
+      long k=sc.nextLong();
+      long m=n;
+      int num=0;
+      while(m!=0)
+      {
+          num++;
+          m/=10;
+      }
+      k=k%num;
+      if(k<0)
+      {
+          k=k+num;
+      }
+      int div=1;
+      int multi=1;
+      for(int i=0;i<num;i++)
+      {
+          if(i<k)
+          {
+              div*=10;
+          }
+          else{
+              multi*=10;
+          }
+      }
+      int rem=(int)n%div;
+      n=n/div;
+      rem=rem*multi;
+      n=n+rem;
+      System.out.print(n);
+    }
+   }
