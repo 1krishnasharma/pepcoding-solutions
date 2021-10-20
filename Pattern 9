@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n=scn.nextInt();
+        int k=2; 
+        for(int i=0;i<n/2+1;i++)
+        {
+            for(int j=0;j<i;j++)
+            System.out.print("\t");
+            System.out.print("*\t");
+            for(int j=0;j<n-k;j++)
+            System.out.print("\t");
+            if(i!=(n/2))
+            System.out.print("*\t");
+            k+=2;
+            System.out.println();
+        }k=2;
+        for(int i=0;i<n/2;i++)
+        {
+            for(int j=0;j<n/2-i-1;j++)
+            System.out.print("\t");
+            System.out.print("*");
+            for(int j=0;j<k;j++)
+            System.out.print("\t");
+            
+            System.out.print("*\t");
+            k+=2;
+            System.out.println();
+        }
+        
+
+    }
+}
